@@ -1,14 +1,12 @@
 #!/bin/bash
 
+echo "Veuillez entrer le nom de votre serveur"
+
+read name
+
 apt update
 
 apt upgrade
-
-useradd merry
-echo "merry:kalimac" | chpasswd
-
-useradd pippin
-echo "pippin:secondbreakfast" | chpasswd
 
 apt install proftpd-*
 
@@ -30,7 +28,7 @@ UseIPv6 on
   IdentLookups off
 </IfModule>
 
-ServerName '"Debian"'
+ServerName '"$name"'
 # Set to inetd only if you would run proftpd by inetd/xinetd/socket.
 # Read README.Debian for more information on proper configuration.
 ServerType standalone
