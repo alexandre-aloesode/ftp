@@ -14,7 +14,7 @@ useradd merry
 echo "merry:kalimac" | chpasswd
 
 useradd pippin
-echo "pippin:secondbreakfast | chpasswd
+echo "pippin:secondbreakfast" | chpasswd
 
 mkdir /etc/proftpd/ssl
 
@@ -376,7 +376,7 @@ TLSProtocol                             SSLv23
 # chmod 0600 /etc/ssl/private/proftpd.key 
 # chmod 0640 /etc/ssl/private/proftpd.key
 # 
-TLSRSACertificateFile                   /etc/proftpd/ssl/proftpd.cert.pem
+TLSRSACertificateF	ile                   /etc/proftpd/ssl/proftpd.cert.pem
 TLSRSACertificateKeyFile                /etc/proftpd/ssl/proftpd.key.pem
 #
 # CA the server trusts...
