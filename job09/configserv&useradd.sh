@@ -421,12 +421,12 @@ Prenom=${Prenom//[[:blank:]]/}
 test $i -eq 1 && ((i=i+1)) && continue
 
 if [ $Role = "Admin" ]; then
-	sudo useradd $Prenom
-	echo "$Prenom:$Mdp" | sudo chpasswd
-	sudo usermod -aG sudo $Prenom
+	useradd $Prenom --password $Mdp
+	usermod -aG sudo $Prenom
+	mkdir /home/$Prenom
 else
-	sudo useradd $Prenom
-	echo "$Prenom:$Mdp" | sudo chpasswd
+	useradd $Prenom --password $Mdp
+	mkdir /home/$Prenom
 fi
 
 done < $INPUT
