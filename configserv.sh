@@ -8,6 +8,8 @@ sudo apt install proftpd-*
 
 mkdir /etc/proftpd/ssl
 
+wget https://github.com/alexandre-aloesode/ftp/blob/alexandre-aloesode/configserv.sh
+
 echo "#
 # /etc/proftpd/proftpd.conf -- This is a basic ProFTPD configuration file.
 # To really apply changes, reload proftpd after modifications, if
