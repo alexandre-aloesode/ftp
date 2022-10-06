@@ -334,7 +334,7 @@ LoadModule mod_memcache.c
 #LoadModule mod_tls_memcache.c
 
 #LoadModule mod_redis.c
-# Install proftpd-mod-crypto to use this module for TLS/SSL support.
+#Install proftpd-mod-crypto to use this module for TLS/SSL support.
 #LoadModule mod_tls_redis.c
 #LoadModule mod_wrap2_redis.c
 
@@ -376,7 +376,7 @@ TLSProtocol                             SSLv23
 # chmod 0600 /etc/ssl/private/proftpd.key 
 # chmod 0640 /etc/ssl/private/proftpd.key
 # 
-TLSRSACertificateF	ile                   /etc/proftpd/ssl/proftpd.cert.pem
+TLSRSACertificateFile                   /etc/proftpd/ssl/proftpd.cert.pem
 TLSRSACertificateKeyFile                /etc/proftpd/ssl/proftpd.key.pem
 #
 # CA the server trusts...
