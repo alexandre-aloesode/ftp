@@ -6,9 +6,15 @@ read name
 
 apt update
 
-apt upgrade
+echo -e "o\n" | apt upgrade
 
-apt install proftpd-*
+echo -e "o\n" | apt install proftpd-*
+
+useradd merry
+echo "merry:kalimac" | chpasswd
+
+useradd pippin
+echo "pippin:secondbreakfast | chpasswd
 
 mkdir /etc/proftpd/ssl
 
