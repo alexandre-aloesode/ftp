@@ -1,10 +1,10 @@
 #!/bin/bash
 
-sudo apt update
+apt update
 
-sudo apt upgrade
+apt upgrade
 
-sudo apt install proftpd-*
+apt install proftpd-*
 
 mkdir /etc/proftpd/ssl
 
