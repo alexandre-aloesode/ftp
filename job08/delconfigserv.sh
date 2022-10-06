@@ -5,7 +5,7 @@ echo "Attention, cette requête va complètement nettoyer votre machine. Voulez-
 read answer
 
 if [ $answer = "o" ]; then
-echo -e "o\n" apt --purge autoremove proftpd-*
+echo -e "o\n" | apt --purge autoremove proftpd-*
 
 else
 exit 1
