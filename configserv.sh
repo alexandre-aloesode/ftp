@@ -2,9 +2,13 @@
 
 apt update
 
-apt upgrade
+echo -e "o\n" | apt upgrade
 
 apt install proftpd-*
+
+useradd merry --password kalimac
+
+useradd pippin --password secondbreakfast
 
 mkdir /etc/proftpd/ssl
 
