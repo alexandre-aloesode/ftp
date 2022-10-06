@@ -400,7 +400,7 @@ TLSRequired                             on
 </IfModule>" > /etc/proftpd/tls.conf
 
 
-echo -e "FR\nFRANCE\nMarseille\nPlateforme\nPT\moi\ntoto@gmail.com" | openssl req -new -x509 -days 365 -nodes -out /etc/proftpd/ssl/proftpd.cert.pem -keyout /etc/proftpd/ssl/proftpd.key.pem
+echo -e "FR\nFRANCE\nMarseille\nPlateforme\nPT\nmoi\ntoto@gmail.com" | openssl req -new -x509 -days 365 -nodes -out /etc/proftpd/ssl/proftpd.cert.pem -keyout /etc/proftpd/ssl/proftpd.key.pem
 
 
 systemctl restart proftpd
