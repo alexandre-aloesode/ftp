@@ -1,20 +1,26 @@
 #!/bin/bash
 
-INPUT= /home/ftp/job09/FTP_Userlist.csv
-IFS=','
-i=1
-
-[ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
-
-while read Id Prenom Nom Mdp Role
-
-do
-
-Prenom=${Prenom//[[:blank:]]/}
-
-test $i -eq 1 && ((i=i+1)) && continue
-
-deluser $Prenom
-rm -r /home/$Prenom
-
-done < $INPUT
+deluser Octavia
+rm -r /home/Octavia
+deluser Bellamy
+rm -r /home/Bellamy
+deluser Abigail
+rm -r /home/Abigail
+deluser Finn
+rm -r /home/Finn
+deluser Jasper
+rm -r /home/Jasper
+deluser Raven
+rm -r /home/Raven
+deluser Monty
+rm -r /home/Monty
+deluser Clarke
+rm -r /home/Clarke
+deluser Marcus
+rm -r /home/Marcus
+deluser John
+rm -r /home/John
+deluser Wells
+rm -r /home/Wells
+deluser Maddy
+rm -r /home/Maddy
