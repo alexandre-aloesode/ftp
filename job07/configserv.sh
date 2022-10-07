@@ -10,12 +10,6 @@ echo -e "o\n" | apt upgrade
 
 echo -e "o\n" | apt install proftpd-*
 
-useradd merry
-echo "merry:kalimac" | chpasswd
-
-useradd pippin
-echo "pippin:secondbreakfast" | chpasswd
-
 mkdir /etc/proftpd/ssl
 
 echo "#

@@ -1,14 +1,18 @@
 #!/bin/bash
 
-deluser Octavia
-deluser Bellamy
-deluser Abigail
-deluser Finn
-deluser Jasper
-deluser Raven
-deluser Monty
-deluser Clarke
-deluser Marcus
-deluser John
-deluser Wells
-deluser Maddy
+INPUT= /ftp/job09/FTP_Userlist.csv
+IFS=','
+i=1
+
+[ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
+
+while read Id Prenom Nom Mdp Role
+
+do
+
+Prenom=${Prenom//[[:blank:]]/}
+
+userdell $Prenom
+rm -r /home/$Prenom
+
+done < $INPUT

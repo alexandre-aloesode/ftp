@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INPUT=/home/serv/ftp/job09/FTP_Userlist.csv
+INPUT=/ftp/job09/FTP_Userlist.csv
 IFS=','
 i=1
 
@@ -22,5 +22,3 @@ else
 fi
 
 done < $INPUT
-
-systemctl restart proftpd
