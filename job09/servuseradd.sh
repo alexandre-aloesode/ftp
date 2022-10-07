@@ -15,12 +15,10 @@ Prenom=${Prenom//[[:blank:]]/}
 test $i -eq 1 && ((i=i+1)) && continue
 
 if [ $Role = "Admin" ]; then
-	useradd $Prenom --password $Mdp
+	useradd -m $Prenom --password $Mdp
 	usermod -aG sudo $Prenom
-	mkdir /home/$Prenom
 else
-	useradd $Prenom --password $Mdp
-	mkdir /home/$Prenom
+	useradd -m $Prenom --password $Mdp
 fi
 
 done < $INPUT
