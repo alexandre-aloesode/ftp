@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INPUT=/ftp/job09/FTP_Userlist.csv
+INPUT=/home/ftp/job09/FTP_Userlist.csv
 IFS=','
 i=1
 
