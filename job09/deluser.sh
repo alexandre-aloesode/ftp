@@ -12,7 +12,9 @@ do
 
 Prenom=${Prenom//[[:blank:]]/}
 
-userdell $Prenom
+test $i -eq 1 && ((i=i+1)) && continue
+
+deluser $Prenom
 rm -r /home/$Prenom
 
 done < $INPUT
