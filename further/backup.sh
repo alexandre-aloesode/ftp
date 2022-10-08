@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #######################1ERE Partie, création de l'archive#################################
-echo -e "aze\n" | su -
+mkdir /backups
 mkdir /backups/proftpdConfig-UsersFiles
 mkdir /backups/proftpdConfig-UsersFiles/proftpdconfig
 mkdir /backups/proftpdConfig-UsersFiles/UsersFiles
@@ -10,11 +10,9 @@ cp /etc/proftpd/proftpd.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/pro
 cp /etc/proftpd/tls.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/tls.conf
 cp /etc/proftpd/modules.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/modules.conf
 tar zcvf /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz /backups/proftpdConfig-UsersFiles
-rm -rf /backups/proftpdConfig-UsersFiles
 
 #######################2EME Partie, envoi de l'archive####################################
 
-#lftp -e "put -O /backups_serv/ /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz" -u serv2,Jesuislemdp280695 192.168.1.57
 lftp -c "open -u serv2,Jesuislemdp280695 192.168.1.57; put -O /backups_serv/ /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz" 
 exit
-rm /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz
+rm -rf /backups
