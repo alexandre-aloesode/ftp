@@ -14,7 +14,8 @@ rm -r /backups/proftpdConfig-UsersFiles
 
 #######################2EME Partie, envoi de l'archive####################################
 
-echo -e "Jesuislemdp280695\n" | lftp serv2@192.168.1.57
-cd /home/backups_serv
+lftp serv2@192.168.1.57
+echo -e "Jesuislemdp280695"
+cd /backups_serv
 put /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz
 exit
