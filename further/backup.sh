@@ -2,7 +2,6 @@
 
 #######################1ERE Partie, création de l'archive#################################
 echo -e "aze\n" | su -
-mkdir /backups
 mkdir /backups/proftpdConfig-UsersFiles
 mkdir /backups/proftpdConfig-UsersFiles/proftpdconfig
 mkdir /backups/proftpdConfig-UsersFiles/UsersFiles
