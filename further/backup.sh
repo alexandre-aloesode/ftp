@@ -14,7 +14,12 @@ cp /etc/proftpd/modules.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/mod
 tar zcvf /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz /backups/proftpdConfig-UsersFiles
 
 #######################2EME Partie, envoi de l'archive####################################
-
+#Nécessite au préalable d'installer et configurer lftp
+#apt install lftp
+#nano /etc/lftp.conf
+#Rajouter le texte suivant au bas du fichier
+#set ssl:verify-certificate no
+###########################################################################################
 lftp -c "open -u serv2,Jesuislemdp280695 192.168.1.57; put -O /backups_serv/ /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz" 
 exit
 rm -rf /backups
