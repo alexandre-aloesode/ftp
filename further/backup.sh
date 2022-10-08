@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #######################1ERE Partie, création de l'archive#################################
+echo -e "aze\n" | su -
 mkdir /backups
 mkdir /backups/proftpdConfig-UsersFiles
 mkdir /backups/proftpdConfig-UsersFiles/proftpdconfig
 mkdir /backups/proftpdConfig-UsersFiles/UsersFiles
-mkdir /backups/archive
 cp /home -r /backups/proftpdConfig-UsersFiles/UsersFiles
 cp /etc/proftpd/proftpd.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/proftpd.conf
 cp /etc/proftpd/tls.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/tls.conf
