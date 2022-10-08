@@ -10,12 +10,11 @@ cp /etc/proftpd/proftpd.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/pro
 cp /etc/proftpd/tls.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/tls.conf
 cp /etc/proftpd/modules.conf /backups/proftpdConfig-UsersFiles/proftpdconfig/modules.conf
 tar zcvf /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz /backups/proftpdConfig-UsersFiles
-rm -r /backups/proftpdConfig-UsersFiles
+rm -rf /backups/proftpdConfig-UsersFiles
 
 #######################2EME Partie, envoi de l'archive####################################
 
-lftp serv2@192.168.1.57
-echo -e "Jesuislemdp280695"
+echo -e "Jesuislemdp280695" | lftp serv2@192.168.1.57
 cd /backups_serv
 put /backups/archive/backup_$(date +'%d-%B-%Y-%R').tar.gz
 exit
